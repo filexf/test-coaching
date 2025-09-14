@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
                 href="#tarifs"
                 className="text-gray-700 hover:text-gray-900 transition-colors"
               >
-                S&apos;abonner
+                Tarifs
               </a>
               <a
                 href="#contact"
@@ -83,10 +84,10 @@ export default function Home() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Je m&apos;abonne maintenant
+                  <Link href="/#tarifs">Je m&apos;abonne maintenant</Link>
                 </button>
                 <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-gray-900 hover:text-gray-900 transition-all duration-300">
-                  Voir les cours
+                  <Link href="/#services">Voir les cours</Link>
                 </button>
               </div>
             </div>
@@ -326,6 +327,163 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="tarifs" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Choisissez votre formule
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Des abonnements adaptés à vos besoins et à votre budget. Commencez
+              votre transformation dès aujourd&apos;hui !
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Plan Découverte */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Découverte
+                </h3>
+                <div className="text-5xl font-bold text-gray-900 mb-2">
+                  29€<span className="text-lg text-gray-500">/mois</span>
+                </div>
+                <p className="text-gray-600">Parfait pour commencer</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">
+                    Accès à 20 vidéos de base
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Programmes débutant</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Support par email</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">
+                    Résiliation à tout moment
+                  </span>
+                </li>
+              </ul>
+
+              <button className="w-full bg-gray-900 text-white py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+                Commencer l&apos;essai
+              </button>
+            </div>
+
+            {/* Plan Premium - Populaire */}
+            <div className="bg-white rounded-2xl p-8 shadow-2xl border-2 border-gray-900 relative transform scale-105">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                Le plus populaire
+              </div>
+
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Premium
+                </h3>
+                <div className="text-5xl font-bold text-gray-900 mb-2">
+                  49€<span className="text-lg text-gray-500">/mois</span>
+                </div>
+                <p className="text-gray-600">Pour des résultats rapides</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">
+                    Accès à toutes les vidéos (62+)
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Programmes tous niveaux</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">
+                    Nouveautés chaque semaine
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Support prioritaire</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Conseils nutritionnels</span>
+                </li>
+              </ul>
+
+              <button className="w-full bg-gray-900 text-white py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+                Choisir Premium
+              </button>
+            </div>
+
+            {/* Plan VIP */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">VIP</h3>
+                <div className="text-5xl font-bold text-gray-900 mb-2">
+                  89€<span className="text-lg text-gray-500">/mois</span>
+                </div>
+                <p className="text-gray-600">Accompagnement personnalisé</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Tout du plan Premium</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Coaching 1-to-1 mensuel</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Programme sur mesure</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Suivi quotidien</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-3 text-xl">✓</span>
+                  <span className="text-gray-700">Appels vidéo illimités</span>
+                </li>
+              </ul>
+
+              <button className="w-full bg-gray-900 text-white py-4 rounded-full font-semibold hover:bg-gray-800 transition-colors">
+                Devenir VIP
+              </button>
+            </div>
+          </div>
+
+          {/* Garantie */}
+          <div className="text-center mt-12">
+            <div className="bg-white rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                🎯 Garantie satisfait ou remboursé
+              </h3>
+              <p className="text-gray-600 text-lg">
+                Essayez nos programmes pendant 30 jours. Si vous n&apos;êtes pas
+                satisfait(e), nous vous remboursons intégralement, sans
+                questions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,16 +505,16 @@ export default function Home() {
                 <div className="flex items-center mb-3">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image
-                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=150&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=922&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                       alt="Beatriz James"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Beatriz James</h4>
+                    <h4 className="font-bold text-gray-900">Sarah Martin</h4>
                     <div className="text-sm text-gray-600">
-                      22 Novembre 2023
+                      22 Août 2025
                     </div>
                   </div>
                 </div>
@@ -366,13 +524,13 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                &quot;J&apos;ai eu la chance de travailler avec Camille, une
+                &quot;J&apos;ai eu la chance de travailler avec Alexandra, une
                 coach sportive exceptionnelle. Elle est chouette, dynamique et
                 passionnée par son travail. Elle a une grande connaissance de la
                 forme physique et de la nutrition, et elle a su me guider tout
                 au long de mon parcours de remise en forme. Grâce à ses conseils
                 et à son soutien, j&apos;ai atteint mes objectifs de santé et de
-                bien-être. Je recommande vivement Camille à tous ceux qui
+                bien-être. Je recommande vivement Alexandra à tous ceux qui
                 cherchent à améliorer leur condition physique et leur qualité de
                 vie.&quot;
               </p>
@@ -390,9 +548,9 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Clara Cadiou</h4>
+                    <h4 className="font-bold text-gray-900">Emma Dubois</h4>
                     <div className="text-sm text-gray-600">
-                      16 Novembre 2023
+                      16 Septembre 2025
                     </div>
                   </div>
                 </div>
@@ -422,9 +580,9 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">émilie BRIERE</h4>
+                    <h4 className="font-bold text-gray-900">Léa Moreau</h4>
                     <div className="text-sm text-gray-600">
-                      15 Novembre 2023
+                      15 Septembre 2025
                     </div>
                   </div>
                 </div>
@@ -452,9 +610,9 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Léna POTIER</h4>
+                    <h4 className="font-bold text-gray-900">Chloé Bernard</h4>
                     <div className="text-sm text-gray-600">
-                      15 Novembre 2023
+                      15 Septembre 2025
                     </div>
                   </div>
                 </div>
@@ -483,9 +641,9 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Joan Auffret</h4>
+                    <h4 className="font-bold text-gray-900">Thomas Leroy</h4>
                     <div className="text-sm text-gray-600">
-                      15 Novembre 2023
+                      15 Septembre 2025
                     </div>
                   </div>
                 </div>
@@ -495,7 +653,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                &quot;Merci pour ce cours riche en intensité. Camille est à
+                &quot;Merci pour ce cours riche en intensité. Alexandra est à
                 l&apos;écoute de nos besoins et sait y répondre que ce soit sur
                 le plan nutri ou sur le plan sportif. Elle s&apos;adapte à notre
                 niveau et nous fait progresser!&quot;
@@ -514,9 +672,9 @@ export default function Home() {
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Marion Huguet</h4>
+                    <h4 className="font-bold text-gray-900">Sophie Laurent</h4>
                     <div className="text-sm text-gray-600">
-                      15 Novembre 2023
+                      15 Septembre 2025
                     </div>
                   </div>
                 </div>
@@ -734,12 +892,12 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">About</h4>
               <p className="text-gray-400 text-sm">
-                FitCoach Pro par Darlow France – Mentions Légales – CGV
+                Made by Félix Orain – Mentions Légales – CGV
               </p>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 FitCoach Pro. Tous droits réservés.</p>
+            <p>&copy; 2025 Félix Orain. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
